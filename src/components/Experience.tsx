@@ -81,14 +81,14 @@ export const Experience = () => {
                 className="relative group"
               >
                 {/* Timeline dot */}
-                <div className="absolute left-6 top-8 w-4 h-4 bg-white border-4 border-yellow-500 rounded-full z-10 hidden md:block group-hover:border-yellow-600 transition-colors duration-300"></div>
+                <div className="absolute left-6 top-8 w-4 h-4 bg-white border-4 border-yellow-500 rounded-full z-10 hidden md:block group-hover:border-yellow-600 group-hover:scale-125 transition-all duration-300"></div>
                 
                 {/* Experience card */}
-                <div className="md:ml-20 bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border border-gray-100">
+                <div className="md:ml-20 bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border border-gray-100 cursor-pointer">
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                     <div className="flex-1">
                       <div className="flex items-center gap-4 mb-3">
-                        <div className={`p-3 bg-gradient-to-r ${exp.color} text-white rounded-xl shadow-lg`}>
+                        <div className={`p-3 bg-gradient-to-r ${exp.color} text-white rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                           {exp.icon}
                         </div>
                         <div>
@@ -106,7 +106,7 @@ export const Experience = () => {
                           <Calendar size={16} />
                           <span>{exp.period}</span>
                         </div>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full w-fit">
+                        <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full w-fit hover:bg-yellow-100 transition-colors duration-300">
                           {exp.type}
                         </span>
                       </div>
@@ -121,7 +121,7 @@ export const Experience = () => {
                     {exp.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="px-4 py-2 bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 text-sm font-medium rounded-full hover:from-yellow-50 hover:to-yellow-100 hover:text-yellow-800 transition-all duration-300 border border-gray-200 hover:border-yellow-300"
+                        className="px-4 py-2 bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 text-sm font-medium rounded-full hover:from-yellow-50 hover:to-yellow-100 hover:text-yellow-800 transition-all duration-300 border border-gray-200 hover:border-yellow-300 cursor-pointer hover:scale-105"
                       >
                         {tech}
                       </span>

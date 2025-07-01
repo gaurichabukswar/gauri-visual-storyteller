@@ -10,6 +10,13 @@ export const Hero = () => {
     }
   };
 
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-16">
       <div className="max-w-7xl mx-auto w-full">
@@ -40,6 +47,7 @@ export const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
+                onClick={scrollToProjects}
                 size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
               >
@@ -48,6 +56,7 @@ export const Hero = () => {
               <Button 
                 variant="outline"
                 size="lg"
+                onClick={() => window.open('https://drive.google.com/file/d/1lFAg2UfiR8Hc9GxH5HmUZpFD18CTpt7w/view?usp=sharing', '_blank')}
                 className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300"
               >
                 Download Resume
@@ -55,13 +64,26 @@ export const Hero = () => {
             </div>
 
             <div className="flex space-x-6 pt-4">
-              <a href="#" className="text-gray-600 hover:text-yellow-600 transition-colors duration-300">
+              <a 
+                href="https://github.com/gaurichabukswar" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-yellow-600 transition-colors duration-300"
+              >
                 <Github size={24} />
               </a>
-              <a href="#" className="text-gray-600 hover:text-yellow-600 transition-colors duration-300">
+              <a 
+                href="https://www.linkedin.com/in/gaurichabukswar/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-yellow-600 transition-colors duration-300"
+              >
                 <Linkedin size={24} />
               </a>
-              <a href="#" className="text-gray-600 hover:text-yellow-600 transition-colors duration-300">
+              <a 
+                href="mailto:gaurichabukswar5@gmail.com" 
+                className="text-gray-600 hover:text-yellow-600 transition-colors duration-300"
+              >
                 <Mail size={24} />
               </a>
             </div>
@@ -76,7 +98,7 @@ export const Hero = () => {
               {/* Profile Image Container */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl">
                 <img 
-                  src="/lovable-uploads/afecc330-e3d6-4e96-bed8-58cdb6ed4909.png"
+                  src="/lovable-uploads/8e2e3319-240d-42a6-9889-ec98cd25b5db.png"
                   alt="Gauri Chabukswar"
                   className="w-full h-full object-cover"
                 />

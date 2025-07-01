@@ -80,7 +80,7 @@ export const Skills = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <div 
                       key={skillIndex}
-                      className={`flex items-center gap-4 px-4 py-3 rounded-xl border transition-all duration-300 hover:scale-105 ${getColorClasses(category.color)}`}
+                      className={`flex items-center gap-4 px-4 py-3 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${getColorClasses(category.color)}`}
                     >
                       <div className="text-gray-600">
                         {skill.icon}
@@ -98,15 +98,15 @@ export const Skills = () => {
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-8">Certifications</h3>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-2xl border border-yellow-200 hover:shadow-lg transition-all duration-300">
+            <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-2xl border border-yellow-200 hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
               <h4 className="font-bold text-gray-900 mb-2">CRLA Level I, II</h4>
               <p className="text-gray-600 text-sm">May 2024</p>
             </div>
-            <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-2xl border border-yellow-200 hover:shadow-lg transition-all duration-300">
+            <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-2xl border border-yellow-200 hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
               <h4 className="font-bold text-gray-900 mb-2">Text Mining and Modelling using Python</h4>
               <p className="text-gray-600 text-sm">NPTEL, August 2023</p>
             </div>
-            <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-2xl border border-yellow-200 hover:shadow-lg transition-all duration-300">
+            <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-2xl border border-yellow-200 hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
               <h4 className="font-bold text-gray-900 mb-2">Diploma in Computer Networks</h4>
               <p className="text-gray-600 text-sm">Alison, March 2022</p>
             </div>
