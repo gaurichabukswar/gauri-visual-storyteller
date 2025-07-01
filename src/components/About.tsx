@@ -1,61 +1,55 @@
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 px-6 lg:px-8 bg-white">
-      <div className="max-w-4xl mx-auto">
-        {/* Section Header */}
+    <section id="about" className="py-20 px-6 lg:px-8 bg-white">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             About Me
           </h2>
-          <div className="w-16 h-0.5 bg-yellow-500 mx-auto"></div>
+          <div className="w-20 h-1 bg-yellow-500 mx-auto rounded-full"></div>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid lg:grid-cols-3 gap-16 items-start">
-          
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-6">
-            <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-6">
+            <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
               <p>
-                I'm a recent Computer Science graduate from California State University, 
-                Monterey Bay, with a concentration in Software Engineering. My passion lies 
-                in the intersection of design and technology, where I create digital experiences 
-                that are both visually compelling and functionally robust.
+                As a passionate software developer and UI/UX designer, I bridge the gap between 
+                beautiful design and functional code. My journey in technology is driven by a 
+                desire to create meaningful digital experiences that solve real-world problems.
               </p>
               <p>
-                Currently working as a Software Developer at Taste Realm, a startup in Salinas, 
-                California, I'm involved in developing innovative food technology solutions that 
-                connect communities and enhance user experiences in the culinary space.
+                With a fresh perspective from my recent graduation and hands-on experience at 
+                Taste Realm, I bring enthusiasm, creativity, and a strong foundation in modern 
+                development practices to every project I work on.
               </p>
               <p>
                 I believe in the power of thoughtful design combined with clean, efficient code 
-                to solve real-world problems and create applications that users genuinely enjoy interacting with.
+                to create applications that users love to interact with.
               </p>
             </div>
           </div>
 
-          {/* Stats Card */}
-          <div className="space-y-8">
-            <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
-              <div className="space-y-6">
-                <div className="text-center border-b border-gray-200 pb-4">
-                  <div className="text-3xl font-light text-yellow-600 mb-1">2025</div>
-                  <div className="text-sm text-gray-500 uppercase tracking-wide">Graduate</div>
-                </div>
-                <div className="text-center border-b border-gray-200 pb-4">
-                  <div className="text-3xl font-light text-yellow-600 mb-1">1+</div>
-                  <div className="text-sm text-gray-500 uppercase tracking-wide">Years Experience</div>
-                </div>
-                <div className="text-center border-b border-gray-200 pb-4">
-                  <div className="text-3xl font-light text-yellow-600 mb-1">10+</div>
-                  <div className="text-sm text-gray-500 uppercase tracking-wide">Projects</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-light text-yellow-600 mb-1">∞</div>
-                  <div className="text-sm text-gray-500 uppercase tracking-wide">Passion</div>
-                </div>
-              </div>
+          <div className="grid grid-cols-2 gap-8">
+            <div className="text-center p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-300">
+              <div className="text-3xl font-bold text-yellow-600 mb-2">2025</div>
+              <div className="text-gray-700 font-medium">Graduate</div>
+              <div className="text-sm text-gray-500">CSU Monterey Bay</div>
+            </div>
+            <div className="text-center p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-300">
+              <div className="text-3xl font-bold text-yellow-600 mb-2">1+</div>
+              <div className="text-gray-700 font-medium">Years</div>
+              <div className="text-sm text-gray-500">Professional Experience</div>
+            </div>
+            <div className="text-center p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-300">
+              <div className="text-3xl font-bold text-yellow-600 mb-2">10+</div>
+              <div className="text-gray-700 font-medium">Projects</div>
+              <div className="text-sm text-gray-500">Completed</div>
+            </div>
+            <div className="text-center p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-300">
+              <div className="text-3xl font-bold text-yellow-600 mb-2">∞</div>
+              <div className="text-gray-700 font-medium">Passion</div>
+              <div className="text-sm text-gray-500">For Innovation</div>
             </div>
           </div>
         </div>

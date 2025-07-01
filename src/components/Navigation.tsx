@@ -25,16 +25,14 @@ export const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100" : "bg-transparent"
+      isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
     }`}>
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="font-medium text-xl text-gray-900">
+          <div className="font-bold text-xl text-gray-900">
             Gauri Chabukswar
           </div>
           
-          {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
             {[
               { id: "home", label: "Home" },
@@ -47,8 +45,8 @@ export const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-gray-900 ${
-                  activeSection === item.id ? "text-gray-900" : "text-gray-600"
+                className={`text-sm font-medium transition-colors hover:text-yellow-600 ${
+                  activeSection === item.id ? "text-yellow-600" : "text-gray-700"
                 }`}
               >
                 {item.label}
@@ -56,10 +54,9 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
           <Button 
             onClick={() => scrollToSection("contact")}
-            className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 font-medium"
+            className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
           >
             Get In Touch
           </Button>
