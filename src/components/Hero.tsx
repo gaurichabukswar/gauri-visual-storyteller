@@ -10,82 +10,82 @@ export const Hero = () => {
     }
   };
 
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-16">
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left Content */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="space-y-2">
-              <p className="text-yellow-600 font-medium tracking-wide uppercase text-sm">
-                Software Developer, UI/UX Designer
-              </p>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Hello, my name is{" "}
-                <span className="text-yellow-600">Gauri Chabukswar</span>
-              </h1>
-            </div>
-            
-            <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
-              <p>
-                I'm Gauri Chabukswar, a recent Computer Science graduate from California State 
-                University, Monterey Bay (June 2025) with a concentration in Software Engineering.
-              </p>
-              <p>
-                I'm passionate about creating digital experiences that are both beautiful and 
-                functional. Currently working as a Software Developer at Taste Realm, a startup 
-                based in Salinas, California.
-              </p>
-            </div>
+    <section id="home" className="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-16 relative overflow-hidden">
+      {/* Subtle background elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-yellow-50/30"></div>
+      <div className="absolute top-20 right-10 w-72 h-72 bg-yellow-100/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-40 left-10 w-96 h-96 bg-yellow-200/10 rounded-full blur-3xl"></div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg"
-                className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                View Projects
-              </Button>
-              <Button 
-                variant="outline"
-                size="lg"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300"
-              >
-                Download Resume
-              </Button>
-            </div>
-
-            <div className="flex space-x-6 pt-4">
-              <a href="#" className="text-gray-600 hover:text-yellow-600 transition-colors duration-300">
-                <Github size={24} />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-yellow-600 transition-colors duration-300">
-                <Linkedin size={24} />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-yellow-600 transition-colors duration-300">
-                <Mail size={24} />
-              </a>
-            </div>
+      <div className="max-w-6xl mx-auto w-full relative z-10">
+        <div className="text-center space-y-8 animate-fade-in">
+          
+          {/* Main Headline */}
+          <div className="space-y-6">
+            <h1 className="text-5xl lg:text-7xl font-light text-gray-900 leading-tight tracking-tight">
+              Hi, I'm <span className="font-medium text-yellow-600">Gauri</span>
+            </h1>
+            <h2 className="text-2xl lg:text-3xl text-gray-600 font-light max-w-4xl mx-auto leading-relaxed">
+              I design interfaces and develop delightful web experiences
+            </h2>
           </div>
 
-          {/* Right Content - Profile Image */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Background Shape */}
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-200 to-yellow-300 rounded-full transform rotate-6 scale-110"></div>
-              
-              {/* Profile Image Container */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl">
-                <img 
-                  src="/lovable-uploads/afecc330-e3d6-4e96-bed8-58cdb6ed4909.png"
-                  alt="Gauri Chabukswar"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-500 rounded-full animate-bounce"></div>
-              <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-yellow-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
-            </div>
+          {/* Subtitle */}
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            Software Developer & UI/UX Designer passionate about creating 
+            meaningful digital experiences that bridge beautiful design with functional code.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+            <Button 
+              onClick={scrollToProjects}
+              size="lg"
+              className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl font-medium"
+            >
+              View Projects
+            </Button>
+            <Button 
+              variant="outline"
+              size="lg"
+              onClick={scrollToAbout}
+              className="border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-full hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 font-medium"
+            >
+              About Me
+            </Button>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex justify-center space-x-6 pt-8">
+            <a 
+              href="https://github.com/gaurichabukswar" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 text-gray-400 hover:text-gray-600 transition-colors duration-300 hover:scale-110 transform"
+            >
+              <Github size={24} />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/gaurichabukswar/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 text-gray-400 hover:text-gray-600 transition-colors duration-300 hover:scale-110 transform"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a 
+              href="mailto:gauri.chabukswar@example.com" 
+              className="p-3 text-gray-400 hover:text-gray-600 transition-colors duration-300 hover:scale-110 transform"
+            >
+              <Mail size={24} />
+            </a>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ export const Hero = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={scrollToAbout}
-            className="text-gray-400 hover:text-yellow-600 transition-colors duration-300"
+            className="text-gray-300 hover:text-yellow-600 transition-colors duration-300"
           >
             <ArrowDown size={24} />
           </button>
